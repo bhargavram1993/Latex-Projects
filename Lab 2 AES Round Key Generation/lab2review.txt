@@ -1,0 +1,238 @@
+5 pts
+
+Correctness:
+
+- The program has a runtime error:
+$ java driver < testcase.txt
+Enter KeyError occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error occured in sBoxCipher method, Could'nt return keys from sBox 
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+Error in printingFinalKeyMatrix() method
+5468617473206D79204B756E67204675
+
+
+Style:
+
+- Correct indentation
+
+- Good block comments
+
+- Some lines of code go beyond 80 (and even 100) characters long. Keep lines of
+  code short. Optimally 80 characters, but no more than 100.
+
+
+Efficiency and Other Comments:
+
+- When searching the Sbox or Rcon you are constantly parsing integers. Perhaps
+  it would be more efficient to have them as integers already and save
+  constantly parsing.
+
+
+
+- Dr. Rivas
