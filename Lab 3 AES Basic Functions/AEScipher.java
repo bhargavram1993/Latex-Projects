@@ -70,7 +70,7 @@ public class AEScipher {
 		}
 	}
 
-	private static final String[][] sBoxTable = {
+	public static final String[][] sBoxTable = {
 			{ "63", "7C", "77", "7B", "F2", "6B", "6F", "C5", "30", "01", "67", "2B", "FE", "D7", "AB", "76" },
 			{ "CA", "82", "C9", "7D", "FA", "59", "47", "F0", "AD", "D4", "A2", "AF", "9C", "A4", "72", "C0" },
 			{ "B7", "FD", "93", "26", "36", "3F", "F7", "CC", "34", "A5", "E5", "F1", "71", "D8", "31", "15" },
@@ -101,10 +101,11 @@ public class AEScipher {
 	 * 
 	 * Parameters: sBoxTableInput:This parameter takes input from sBoxTable
 	 */
-	private static String sBoxCipher(String sBoxTableInput) {
+	public static String sBoxCipher(String sBoxTableInput) {
 		try {
 			String keys = sBoxTable[Integer.parseInt(sBoxTableInput.split("")[0], 16)][Integer
 					.parseInt(sBoxTableInput.split("")[1], 16)];
+			//System.out.println(Keys);
 			return keys;
 		} catch (Exception sBox) {
 			System.err.println("Error occured in sBoxCipher method, Could'nt return keys from sBox ");
@@ -112,7 +113,7 @@ public class AEScipher {
 		}
 	}
 
-	private static final String[][] rConTable = {
+	public static final String[][] rConTable = {
 			{ "8D", "01", "02", "04", "08", "10", "20", "40", "80", "1B", "36", "6C", "D8", "AB", "4D", "9A" },
 			{ "2F", "5E", "BC", "63", "C6", "97", "35", "6A", "D4", "B3", "7D", "FA", "EF", "C5", "91", "39" },
 			{ "72", "E4", "D3", "BD", "61", "C2", "9F", "25", "4A", "94", "33", "66", "CC", "83", "1D", "3A" },
@@ -136,7 +137,7 @@ public class AEScipher {
 	 * 
 	 * Parameters: rConTableInput: parameter fetches input from rConTable
 	 */
-	private static String rConCipher(int rConTableInput) {
+	public static String rConCipher(int rConTableInput) {
 		try {
 			String rConOutput = rConTable[0][rConTableInput];
 			return rConOutput;
@@ -231,10 +232,13 @@ public class AEScipher {
 				System.out.println("");
 				// to get each key in one line after other
 				printCounter++;
+			
 			}
+			System.out.print(finalMatrix[0][0]);
 		} catch (Exception rCon) {
 			System.err.println("Error in printingFinalKeyMatrix() method, Couldn't print final keys ");
 		}
+		System.out.print(finalMatrix[1][0]);
 	}
 
 	/**
@@ -244,7 +248,7 @@ public class AEScipher {
 	 * is used by finalKeyMatrix method.
 	 * 
 	 */
-	private static String xorCaliculation(String value1, String value2) {
+	public static String xorCaliculation(String value1, String value2) {
 		try {
 			int firstValue = Integer.parseInt(value1, 16);
 			int secondValue = Integer.parseInt(value2, 16);
@@ -256,6 +260,15 @@ public class AEScipher {
 		} catch (Exception xor) {
 			System.err.println("Error in printingFinalKeyMatrix() method");
 			return "";
+		}
+	}
+	public static void aesAddKey(){
+		try{
+			String[][] addRoundKeyMatrix = new String[4][4];
+			addRoundKeyMatrix[0][0] = xorCaliculation(sBoxCipher(null), finalMatrix[0][0]);
+			System.out.println(addRoundKeyMatrix[0][0]);
+		}catch (Exception addkey){
+			
 		}
 	}
 }
