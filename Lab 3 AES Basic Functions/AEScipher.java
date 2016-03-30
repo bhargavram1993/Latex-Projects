@@ -23,27 +23,44 @@ public class AEScipher {
 	/**
 	 * inputtingStringIntoKMatrix This method takes 128-bit encryption key from
 	 * driver.java class and inserts it in a 4x4 Matrix.
+	 * @return 
 	 */
-	public void inputtingStringIntoKMatrix(String key) {
+	public String[][] inputtingStringIntoKMatrix(String key) {
+		stringIntoMatrixConversion(key);
+		
+		// Control flow of the program, copyingIntoWHexMatrix() method is
+					// called.
+			copyingIntoWHexMatrix();
+			
+		
+		return finalMatrix;
+	}
+	public static String[][] stringIntoMatrixConversion(String key){
+		String[][] tempMatrix = new String[4][4];
 		try {
 			int keyTraversalCounter = 0;
 			for (int kMatrixColumn = 0; kMatrixColumn < 4; kMatrixColumn++) {
 				for (int kMatrixRow = 0; kMatrixRow < 4; kMatrixRow = kMatrixRow + 1) {
-					inputKeyMatrix[kMatrixRow][kMatrixColumn] = key.substring(keyTraversalCounter,
+					tempMatrix[kMatrixRow][kMatrixColumn] = key.substring(keyTraversalCounter,
 							keyTraversalCounter + 2);
 					// The key is traversed and every two characters are split
 					// and inserted into matrix.
 					keyTraversalCounter = keyTraversalCounter + 2;
 				}
+				for(int i=0; i<4; i++){
+					System.out.println("");
+					for(int j=0; j<4; j++){
+						inputKeyMatrix[i][j] = tempMatrix[i][j];
+					}
 			}
-			copyingIntoWHexMatrix();
-			// Control flow of the program, copyingIntoWHexMatrix() method is
-			// called.
+			}
 		} catch (Exception ex) {
 			System.err.println(
 					"Error occured in inputtingStringIntoKMatrix mathod, generation of input 4x4 matrix not possible ");
 		}
+		return tempMatrix;
 	}
+	
 
 	/**
 	 * copyingIntoWHexMatrix
@@ -54,6 +71,7 @@ public class AEScipher {
 	 */
 
 	public static void copyingIntoWHexMatrix() {
+		
 		try {
 			for (int wMatrixRow = 0; wMatrixRow < 4; wMatrixRow = wMatrixRow + 1) {
 				for (int wMatrixColumn = 0; wMatrixColumn < 4; wMatrixColumn++) {
@@ -68,6 +86,7 @@ public class AEScipher {
 			System.err.println(
 					"Error occured in copyingIntoWHexMatrix() method, couldn't copy values from 4x4 martix to 4x44 matrix ");
 		}
+		
 	}
 
 	public static final String[][] sBoxTable = {
@@ -197,19 +216,20 @@ public class AEScipher {
 					// rConTable,Perform an XOR operation using the
 					// corresponding round constant obtained
 					temporaryMatrix[0][0] = xorCaliculation(rConCipher(r), temporaryMatrix[0][0]);
-					for (int row = 0; row < 4; row++) {
+					for (int fianlMatrixRow = 0; fianlMatrixRow < 4; fianlMatrixRow++) {
 						// finally, finalMatrix can be obtained by xoring
 						// previous column with the temporary matrix.
-						finalMatrix[row][finalMatrixColumn] = xorCaliculation(finalMatrix[row][finalMatrixColumn - 4],
-								temporaryMatrix[0][row]);
+						finalMatrix[fianlMatrixRow][finalMatrixColumn] = xorCaliculation(finalMatrix[fianlMatrixRow][finalMatrixColumn - 4],
+								temporaryMatrix[0][fianlMatrixRow]);
 					}
 				}
 			}
-			printingFinalKeyMatrix();
+			//printingFinalKeyMatrix();
 		} catch (Exception rCon) {
 			System.err.println(
 					"Error occured in finalKeyMatrix() method, Couldn't perform left shift and XOR operations ");
 		}
+		
 	}
 
 	/**
@@ -232,13 +252,10 @@ public class AEScipher {
 				System.out.println("");
 				// to get each key in one line after other
 				printCounter++;
-			
 			}
-			System.out.print(finalMatrix[0][0]);
 		} catch (Exception rCon) {
 			System.err.println("Error in printingFinalKeyMatrix() method, Couldn't print final keys ");
 		}
-		System.out.print(finalMatrix[1][0]);
 	}
 
 	/**
@@ -262,13 +279,38 @@ public class AEScipher {
 			return "";
 		}
 	}
-	public static void aesAddKey(){
+	public static String[][] aesAddKey(String Key,String Message){
 		try{
-			String[][] addRoundKeyMatrix = new String[4][4];
-			addRoundKeyMatrix[0][0] = xorCaliculation(sBoxCipher(null), finalMatrix[0][0]);
-			System.out.println(addRoundKeyMatrix[0][0]);
+			String[][] aesXORMatrix = new String[4][4];
+			String[][] keyMatrix = stringIntoMatrixConversion(Key);
+			String[][] messageMatrix = stringIntoMatrixConversion(Message);
+			for(int i=0; i<keyMatrix.length; i++){
+				System.out.println("");
+				for(int j=0; j<keyMatrix[i].length; j++){
+					System.out.print(keyMatrix[i][j]+ " ");
+				}
+			}
+			for(int i=0; i<keyMatrix.length; i++){
+				System.out.println("");
+				for(int j=0; j<keyMatrix[i].length; j++){
+					System.out.print(messageMatrix[i][j]+ " ");
+				}
+			}
+			for(int i=0; i<keyMatrix.length; i++){
+				for(int j=0; j<keyMatrix[i].length; j++){
+					aesXORMatrix[i][j] = xorCaliculation(keyMatrix[i][j], messageMatrix[i][j]);
+				}
+			}
+			//addRoundKeyMatrix[0][0] = xorCaliculation();
+			for(int i=0; i<keyMatrix.length; i++){
+				System.out.println("");
+				for(int j=0; j<keyMatrix[i].length; j++){
+					System.out.print(aesXORMatrix[i][j]+ " ");
+				}
+			}
 		}catch (Exception addkey){
 			
 		}
+		return null;
 	}
 }

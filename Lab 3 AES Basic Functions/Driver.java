@@ -26,14 +26,17 @@ public class Driver {
 			BufferedReader standardInput = new BufferedReader(new InputStreamReader(System.in));
 			System.out.print("Enter Key");
 			String keyValue = standardInput.readLine();
+			String inputMessage= standardInput.readLine();
+			//System.out.println(inputMessage);
 			// Characters read by BufferedReader are taken as input and saved in
 			// keyValue.
 			AEScipher cipher = new AEScipher();
 			// An instance to a class aescipher is created
-			cipher.inputtingStringIntoKMatrix(keyValue);
+			String[][] roundKeysMatrix=cipher.inputtingStringIntoKMatrix(keyValue);
 			// Instance is created and the first method
 			// "inputtingStringIntoKMatrix" is called and input value is
 			// passed to that method.
+			String[][] aesAddKeyResult = cipher.aesAddKey(keyValue , inputMessage);
 		} catch (IOException excep) {
 			System.err.println("Invalid Format in ");
 		}
