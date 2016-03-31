@@ -1,26 +1,23 @@
 /**
- * file: aescipher.java
+ * file: AEScipher.java
  * author: Bhargav Uppalapati
  * course: MSCS 630 - Rivas
- * assignment: project 1
- * due date: FEB 23, 2016
+ * assignment: project 2
+ * due date: MAR 31, 2016
  * 
  * This file contains the Programming of Advanced Encryption System(AES).
  * One important part of the AES is how it produces keys on every round of encryption type.
  */
 /**
- * aescipher
+ * AEScipher
  * 
- * This class implements a linked list with single forward links, and supports
- * dynamic addition and deletion of nodes.
  */
 public class AEScipher {
+	// Creating a 4x4 Matrix for input key
 	public static String[][] inputKeyMatrix = new String[4][4];
-	// Creating a 4x4 Matrix
+	// Creating a 4x44 Matrix 
 	public static String[][] finalMatrix = new String[4][44];
 	public static String[] roundKeys = new String[11];
-
-	// Creating a 4x44 Matrix
 	/**
 	 * inputtingStringIntoKMatrix This method takes 128-bit encryption key from
 	 * driver.java class and inserts it in a 4x4 Matrix.
@@ -34,6 +31,7 @@ public class AEScipher {
 		copyingIntoWHexMatrix();
 		return roundKeys;
 	}
+
 	public static String[][] stringIntoMatrixConversion(String key) {
 		String[][] tempMatrix = new String[4][4];
 		try {
@@ -57,6 +55,7 @@ public class AEScipher {
 		}
 		return tempMatrix;
 	}
+
 	/**
 	 * copyingIntoWHexMatrix
 	 * 
@@ -80,6 +79,7 @@ public class AEScipher {
 					"Error occured in copyingIntoWHexMatrix() method, couldn't copy values from 4x4 martix to 4x44 matrix ");
 		}
 	}
+
 	public static final String[][] sBoxTable = {
 			{ "63", "7C", "77", "7B", "F2", "6B", "6F", "C5", "30", "01", "67", "2B", "FE", "D7", "AB", "76" },
 			{ "CA", "82", "C9", "7D", "FA", "59", "47", "F0", "AD", "D4", "A2", "AF", "9C", "A4", "72", "C0" },
@@ -122,6 +122,7 @@ public class AEScipher {
 			return "";
 		}
 	}
+
 	public static final String[][] rConTable = {
 			{ "8D", "01", "02", "04", "08", "10", "20", "40", "80", "1B", "36", "6C", "D8", "AB", "4D", "9A" },
 			{ "2F", "5E", "BC", "63", "C6", "97", "35", "6A", "D4", "B3", "7D", "FA", "EF", "C5", "91", "39" },
@@ -155,6 +156,7 @@ public class AEScipher {
 			return "";
 		}
 	}
+
 	/**
 	 * finalKeyMatrix
 	 *
@@ -219,6 +221,7 @@ public class AEScipher {
 					"Error occured in finalKeyMatrix() method, Couldn't perform left shift and XOR operations ");
 		}
 	}
+
 	/**
 	 * printingFinalKeyMatrix
 	 *
@@ -249,6 +252,7 @@ public class AEScipher {
 			System.err.println("Error in printingFinalKeyMatrix() method, Couldn't print final keys ");
 		}
 	}
+
 	/**
 	 * xorCaliculation
 	 *
@@ -270,6 +274,7 @@ public class AEScipher {
 			return "";
 		}
 	}
+
 	public static String[][] aesAddKey(String Key, String Message) {
 		try {
 			String[][] aesXORMatrix = new String[4][4];
@@ -286,6 +291,7 @@ public class AEScipher {
 			return null;
 		}
 	}
+
 	public static String[][] aesNibbleSubstitution(String[][] Key) {
 		String nibbledSubstitutionMatrix[][] = new String[4][4];
 		for (int i = 0; i < 4; i++) {
@@ -295,6 +301,7 @@ public class AEScipher {
 		}
 		return nibbledSubstitutionMatrix;
 	}
+
 	public static String[][] aesShiftRows(String[][] Key) {
 		String aesShiftRowsMatrix[][] = new String[4][4];
 		int shiftValue;
@@ -331,9 +338,10 @@ public class AEScipher {
 		}
 		return aesShiftRowsMatrix;
 	}
+
 	public static int[][] mixColumn = { { 0x02, 0x03, 0x01, 0x01 }, { 0x01, 0x02, 0x03, 0x01 },
 			{ 0x01, 0x01, 0x02, 0x03 }, { 0x03, 0x01, 0x01, 0x02 } };
-	
+
 	public static String[][] aesMixColumn(String[][] Key) {
 		String aesMixColumnMatrix[][] = new String[4][4];
 		for (int i = 0; i < 4; i++) {
@@ -343,6 +351,7 @@ public class AEScipher {
 		}
 		return aesMixColumnMatrix;
 	}
+
 	public static String mixColumnAddition(String[][] Key, int[][] mixclmn, int i, int j) {
 		int sum = 0;
 		for (int k = 0; k < 4; k++) {
